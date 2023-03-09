@@ -1,7 +1,23 @@
 import List from "../products.json";
 import List2 from "../products2.json";
+// import { useHistory } from "react-router-dom";
 
 export default function Cart(){
+//     const [cart, setCart] = useCart
+    // const history = useHistory();
+//     let frete;
+//     const subtotal = cart
+//         .reduce((product, acc) => acc.price + product, 0)
+//         .toFixed(2);
+//     for (let i = 0; i < cart.length; i++) {
+//         if (parseInt(subtotal) < 250) {
+//           frete = frete + 10;
+//           if (parseInt(subtotal) > 250) {
+//             frete = 0;
+//           }
+//         }
+//     }
+
     return(
         <main className="bg-black">
             <section>
