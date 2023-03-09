@@ -5,7 +5,7 @@ export default function Card(){
     return(
         <section className="flex overflow-x-auto py-6">
             {List.map((card) =>(
-                <div className="p-4 mx-4 bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px]">
+                <div className="p-4 mx-4 bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px]" key={card.id}>
                     <div>
                         <img className="rounded-[12px]" src={`/src/Assets/Imgs/${card.image}`} alt="" />
                     </div>
@@ -18,7 +18,7 @@ export default function Card(){
                 </div>
             ))}
             {List2.map((card) =>(
-                <div className="p-4 mx-4 bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px]">
+                <div className="p-4 mx-4 bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px]" key={card.id}>
                     <div>
                         <img className="rounded-[12px]" src={`/src/Assets/Imgs/${card.image}`} alt="" />
                     </div>
