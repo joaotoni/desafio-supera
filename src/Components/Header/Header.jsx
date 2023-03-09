@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Cart from "../../Assets/Icons/cart-icon.svg"
 
 export default function Header(){
@@ -5,14 +6,14 @@ export default function Header(){
         <header>
             <nav className="flex items-center justify-evenly p-4">
                 <div className="">
-                    <button>
+                    <Link to={"/"}>
                         <h1 className="text-white text-[32px]">Ofertão</h1>
-                    </button>
+                    </Link>
                 </div>
                 <div>
-                    <button>
+                    <Link to={"/cart"}>
                         <img src={Cart} alt="" width={50} />
-                    </button>
+                    </Link>
                 </div>
             </nav>
         </header>
