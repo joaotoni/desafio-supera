@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Card from "../Components/Card/Card";
 import List from "../products.json"
 export default function Home(){
@@ -12,6 +14,7 @@ export default function Home(){
             ))}
           </div>
         </section>
+        <ToastContainer theme="dark" />
       </main>
     )
 }
