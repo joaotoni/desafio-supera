@@ -7,11 +7,18 @@ export default function Cart(){
 
     return(
         <main className="">
-            <section>
-                <h3>Produtos:</h3>
+            <section className="flex flex-col  justify-center items-center">  
+                <div className="flex flex-col text-center bg-[#b2b4b4] p-4 rounded-[12px]">
+                    <span className="text-black text-[24px]">Total:</span>
+                    <span className="text-black text-[20px]">R$ {totalPrice.toFixed(2)}</span>
+                    <button className="text-black bg-[#7ccbfc] p-2 rounded-xl text-[22px] mt-2" onClick={() => clearCart()}>
+                        Limpar o carrinho de compras
+                    </button>
+                </div>
                 <div>
+                    <h3>Produtos:</h3>
                     {productsCart.map((card) =>(
-                        <div className="p-4 mx-4 bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px] w-[300px]" key={card.id}>
+                        <div className="p-4  bg-[#b2b4b4] flex flex-wrap items-center justify-center text-center rounded-[12px] w-[300px] mb-6 " key={card.id}>
                             <div>
                                 <img className="rounded-[12px]" src={`/src/Assets/Imgs/${card.image}`} alt="" />
                             </div>
@@ -24,12 +31,6 @@ export default function Cart(){
                             </div>
                         </div>
                     ))}  
-                </div>
-                <div>
-                    <span className="bg-pink-800">R$ {totalPrice.toFixed(2)}</span>
-                    <button className="bg-pink-800" onClick={() => clearCart()}>
-                        Limpar o carrinho de compras
-                    </button>
                 </div>
             </section>
         </main>
