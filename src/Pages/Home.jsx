@@ -4,12 +4,6 @@ import { CartContext } from "../Context/CartContext/CartContext";
 import List from "../products.json"
 
 export default function Home(){
-  const {
-    productsCart = [],
-    addProducToCart,
-    removeProductToCart,
-    clearCart,
-  } = useContext(CartContext);
 
     return(
       <main className="flex py-6">
