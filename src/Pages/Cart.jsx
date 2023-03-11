@@ -1,6 +1,7 @@
 import { CartContext } from "../Context/CartContext/CartContext";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+import FormatValue from "../Utils/FormatValue";
 
 export default function Cart(){
     const {productsCart, removeProductToCart, clearCart} = useContext(CartContext)
@@ -11,7 +12,7 @@ export default function Cart(){
             <section className="flex flex-col  justify-center items-center">  
                 <span className="text-white font-bold text-[24px]">Resumo do pedido</span>
                 <div className="flex flex-col text-center bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 p-4 rounded-[12px]">
-                    <span className="text-black text-[20px]">O valor total é de R$ {totalPrice.toFixed(2)}</span>
+                    <span className="text-black text-[20px]">O valor total é de R$ {FormatValue(totalPrice.toFixed(2))}</span>
                     <Link to={"/done"}>
                         <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 mx-8" onClick={() => clearCart()}>
                             Finalizar o pedido
@@ -33,7 +34,7 @@ export default function Cart(){
                             <div className="w-[250px]">
                                 <h2 className="text-black text-[16px] font-bold">{card.name}</h2>
                                 <p className="text-black text-[16px]">Pontuação: {card.score}</p>
-                                <p className="text-black text-[16px]">R${(card.price*card.qtd).toFixed(2)}</p>
+                                <p className="text-black text-[16px]">{FormatValue(card.price*card.qtd)}</p>
                                 <p className="text-black text-[16px]">Quantidade {card.qtd}</p>
                                 <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-2" onClick={() => removeProductToCart(card.id)}>Remover do carrinho</button>
                             </div>

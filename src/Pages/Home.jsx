@@ -1,6 +1,5 @@
 import Card from "../Components/Card/Card";
 import List from "../products.json"
-
 export default function Home(){
 
     return(

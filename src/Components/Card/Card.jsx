@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../Context/CartContext/CartContext";
+import FormatValue from "../../Utils/FormatValue";
+
 
 export default function Card({info}){
     const { addProducToCart } = useContext(CartContext);
@@ -11,8 +13,8 @@ export default function Card({info}){
             <div className="w-[250px]">
                 <h2 className="text-black text-[16px] font-bold">{info.name}</h2>
                 <p className="text-black text-[16px]">Pontuação: {info.score}</p>
-                <p className="text-black text-[16px]">R${info.price}</p>
-                <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-4" onClick={() => addProducToCart(info)}>Adicionar no carrinho</button>  
+                <p className="text-black text-[16px]">{FormatValue(info.price)}</p>
+                <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-4" onClick={() => addProducToCart(info)}>Adicionar no carrinho</button>       
             </div>
         </div>
     )

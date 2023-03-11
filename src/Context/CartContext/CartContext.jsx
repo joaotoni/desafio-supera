@@ -17,10 +17,8 @@ export default function CartProvider({ children }) {
       } else {
         item.qtd = item.qtd + 1;
       }
-  
       setProductsCart(copyProductsCart);
     }
-    console.log(productsCart)
     
     function removeProductToCart(id) {
       const copyProductsCart = [...productsCart];
