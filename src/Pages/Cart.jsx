@@ -12,9 +12,11 @@ export default function Cart(){
                 <span className="text-white font-bold text-[24px]">Resumo do pedido</span>
                 <div className="flex flex-col text-center bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 p-4 rounded-[12px]">
                     <span className="text-black text-[20px]">O valor total é de R$ {totalPrice.toFixed(2)}</span>
-                    <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-2" onClick={() => clearCart()}>
-                        Finalizar o pedido
-                    </button>
+                    <Link to={"/done"}>
+                        <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 mx-8" onClick={() => clearCart()}>
+                            Finalizar o pedido
+                        </p>
+                    </Link>
                     <Link> 
                         <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2" onClick={() => clearCart()}>
                             Limpar o carrinho de compras
