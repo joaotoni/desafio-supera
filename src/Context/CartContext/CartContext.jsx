@@ -5,8 +5,6 @@ export const CartContext = createContext();
 export default function CartProvider({ children }) {
     const [productsCart, setProductsCart] = useState([]);
   
-    //{id: 1, qtd:1}
-  
     function addProducToCart(card) {
       const copyProductsCart = productsCart.length == 0 ? [] : [...productsCart];
   
