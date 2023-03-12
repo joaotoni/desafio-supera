@@ -42,7 +42,7 @@ export default function Cart(){
                     {productsCart.map((card) =>(
                         <div className="p-4  bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 flex flex-wrap items-center justify-center text-center rounded-[12px] w-[300px] mb-6 md:flex-nowrap md:w-[800px] md:justify-around md:items-stretch" key={card.id}>
                             <div>
-                                <img className="rounded-[12px] md:w-[400px]" src={`/src/Assets/Imgs/${card.image}`} alt="" />
+                                <img className="rounded-[12px] md:w-[400px]" src={`/Assets/Imgs/${card.image}`} alt="" />
                             </div>
                             <div className="w-[250px] md:w-[500px] ">
                                 <h2 className="text-black text-[16px] font-bold md:text-[24px] md:pb-4">{card.name}</h2>
