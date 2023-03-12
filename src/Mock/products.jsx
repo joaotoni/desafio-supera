@@ -1,4 +1,4 @@
-
+import Fifa from "../Assets/Imgs/fifa-18.png"
 import Call_of_Duty_Infinite from "../Assets/Imgs/call-of-duty-infinite-warfare.png"
 import Call_of_Duty_WWii from "../Assets/Imgs/call-of-duty-wwii.png"
 import Horizon_Zero_Dawn from "../Assets/Imgs/horizon-zero-dawn.png"

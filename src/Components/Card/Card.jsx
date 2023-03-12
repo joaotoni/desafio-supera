@@ -17,7 +17,7 @@ export default function Card({info}){
     return(
         <div className="p-4 mx-4 bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 flex flex-wrap items-center justify-center text-center rounded-[12px]" >
             <div>
-                <img className="rounded-[12px]" src={`/src/Assets/Imgs/${info.image}`} alt="" />
+                <img className="rounded-[12px]" src={`/Assets/Imgs/${info.image}`} alt="" />
             </div>
             <div className="w-[250px]">
                 <h2 className="text-black text-[16px] font-bold">{info.name}</h2>
