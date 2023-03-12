@@ -22,17 +22,17 @@ export default function Cart(){
 
     return(
         <main className="">
-            <section className="flex flex-col justify-center items-center  md:flex-row-reverse md:justify-around md:items-start">  
-                <div className="flex flex-col mt-6 text-center bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 p-4 rounded-[12px] md:p-12">
-                    <span className="text-white font-bold text-[24px] md:pb-4">Resumo do pedido</span>
-                    <span className="text-black text-[20px] md:pb-4">O valor total é de R$ {FormatValue(totalPrice.toFixed(2))}</span>
+            <section className="flex flex-col justify-center items-center  lg:flex-row-reverse lg:justify-around lg:items-start">  
+                <div className="flex flex-col mt-6 text-center bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 p-4 rounded-[12px] lg:p-10">
+                    <span className="text-white font-bold text-[24px] lg:pb-4">Resumo do pedido</span>
+                    <span className="text-black text-[20px] lg:pb-4">O valor total é de {FormatValue(totalPrice.toFixed(2))}</span>
                     <Link to={"/done"}>
-                        <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 mx-8 md:mb-4" onClick={() => clearCart()}>
+                        <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 mx-8 lg:mb-4" onClick={() => clearCart()}>
                             Finalizar o pedido
                         </p>
                     </Link>
                     <Link> 
-                        <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 md:mb-4" onClick={() => clearCart()}>
+                        <p className="text-white bg-black p-2 rounded-xl text-[18px] mt-2 lg:mb-4" onClick={() => clearCart()}>
                             Limpar o carrinho de compras
                         </p>
                     </Link>
@@ -40,16 +40,16 @@ export default function Cart(){
                 <div>
                     <h3>Produtos:</h3>
                     {productsCart.map((card) =>(
-                        <div className="p-4  bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 flex flex-wrap items-center justify-center text-center rounded-[12px] w-[300px] mb-6 md:flex-nowrap md:w-[800px] md:justify-around md:items-stretch" key={card.id}>
+                        <div className="p-4  bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 flex flex-wrap items-center justify-center text-center rounded-[12px] w-[300px] mb-6 lg:flex-nowrap lg:w-[650px] lg:justify-around lg:items-stretch" key={card.id}>
                             <div>
-                                <img className="rounded-[12px] md:w-[400px]" src={`/Assets/Imgs/${card.image}`} alt="" />
+                                <img className="rounded-[12px] lg:w-[400px]" src={`/Assets/Imgs/${card.image}`} alt="" />
                             </div>
-                            <div className="w-[250px] md:w-[500px] ">
-                                <h2 className="text-black text-[16px] font-bold md:text-[24px] md:pb-4">{card.name}</h2>
-                                <p className="text-black text-[16px]  md:text-[22px] md:pb-4">Pontuação: {card.score}</p>
-                                <p className="text-black text-[16px] md:text-[22px] md:pb-4">{FormatValue(card.price*card.qtd)}</p>
-                                <p className="text-black text-[16px]  md:text-[22px] md:pb-4">Quantidade {card.qtd}</p>
-                                <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-2  md:text-[22px]" onClick={() => removeProductToCart(card.id)}>Remover do carrinho</button>
+                            <div className="w-[250px] lg:w-[500px] ">
+                                <h2 className="text-black text-[16px] font-bold lg:text-[24px] lg:pb-4">{card.name}</h2>
+                                <p className="text-black text-[16px]  lg:text-[22px] lg:pb-4">Pontuação: {card.score}</p>
+                                <p className="text-black text-[16px] lg:text-[22px] lg:pb-4">{FormatValue(card.price*card.qtd)}</p>
+                                <p className="text-black text-[16px]  lg:text-[22px] lg:pb-4">Quantidade {card.qtd}</p>
+                                <button className="text-white bg-black p-2 rounded-xl text-[18px] mt-2  lg:text-[22px]" onClick={() => removeProductToCart(card.id)}>Remover do carrinho</button>
                             </div>
                         </div>
                     ))}  
