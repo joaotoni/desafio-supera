@@ -4,15 +4,15 @@ import FormatValue from "../../Utils/FormatValue";
 import { toast } from "react-toastify";
 
 export default function Card({info}){
-    const { addProducToCart } = useContext(CartContext);
+    const { addProductToCart } = useContext(CartContext);
     const handleAddProductToCart = useCallback (async () => {
         try {
-            addProducToCart(info);
+            addProductToCart(info);
             toast.success('Produto adicionado no carrinho')
         } catch {
             toast.error('Erro ao adicionar produto no carrinho')
         }
-    }, [addProducToCart, info])
+    }, [addProductToCart, info])
     
     return(
         <div className="p-4 mx-4 bg-opacity-50 bg-gradient-to-b from-orange-900 to-orange-400 flex flex-wrap items-center justify-center text-center rounded-[12px]" >
